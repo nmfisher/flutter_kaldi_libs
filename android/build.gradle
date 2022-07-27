@@ -27,6 +27,8 @@ apply plugin: 'kotlin-android'
 android {
     compileSdkVersion 30
 
+    ndkVersion "23.2.8568313"
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -42,6 +44,9 @@ android {
 
     defaultConfig {
         minSdkVersion 16
+        ndk {
+          abiFilters "x86_64", "armeabi-v7a", "arm64-v8a"
+        } 
     }
 }
 
